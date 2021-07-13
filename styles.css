@@ -1,0 +1,290 @@
+/* TOOLTIP */
+
+.accent-colors {
+  color:#5e8c70;
+  font-family: 'Hind', sans-serif;
+  font-size: 2em;
+  font-weight: bold;
+  margin: 1em;
+}
+
+a {
+  background: #5e8c70;
+  border-radius: 100%;
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+  width: 40px;
+  height: 28px;
+  margin: 0 2px;
+  padding-top: 12px;
+  /* -webkit-transition: all .5s; */
+  /* -moz-transition: all .5s; */
+  /* transition: all .5s; */
+}
+
+a span {
+  background: #fff;
+  color: #222;
+  font-size: 14px;
+  font-weight: bold;
+  position:  absolute;
+  bottom: 0;
+  left: -25px;
+  right: -25px;
+  padding: 5px 7px;
+  visibility: hidden;
+  opacity: 0;
+  width: 100%;
+  /* -webkit-transition: all .4s;
+  -moz-transition: all .4s;
+  transition: all .4s; */
+}
+
+a span:before {
+  content: '';
+/*   width: 0;
+  height: 0; */
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #fff;
+  position: absolute;
+  bottom: -5px;
+  left: 40px;
+}
+
+a:hover span {
+  bottom: 50px;
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/* Hover through the icons */
+
+a.facebook:hover {
+  background-color: #4183d7; 
+  color: #bfbfbf;
+}
+
+a.facebook span {
+  color: #4183d7;
+}
+
+
+
+/* SWITCH-BUTTON */
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch.text {
+  position: relative;
+  display: inline-block;
+  width: 9em;
+  height: 4em;
+}
+
+.option {
+  color:#ffffff;
+  font-family: 'Hind', sans-serif;
+  font-size: 1em;
+  padding: 0.5em;
+  text-align: center;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #5e8c70;
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 3em;
+  width: 3em;
+  left: 0.5em;
+  bottom: 0.5em;
+  background-color: rgb(255, 255, 255, 25%);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #5e8c70;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(5em);
+  -ms-transform: translateX(5em);
+  transform: translateX(5em);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 5em;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* DETAILS-DROPDOWN */
+
+details {
+  color:#5e8c70;
+  font-family: 'Hind', sans-serif;
+  font-size: 1em;
+  padding: 1em;
+  margin: auto;
+}
+/* 
+.details-stage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 5rem 0;
+  margin: auto;
+  overflow: hidden;
+} */
+
+summary {
+  color:#5e8c70;
+  font-family: 'Hind', sans-serif;
+  font-size: 1em;
+  padding: 1em;
+  margin: auto;
+}
+
+details[open] {
+  padding: 1em;
+}
+
+details[open] summary {
+  border-bottom: 1px dotted #5e8c70;
+  margin-bottom: 1em;
+}
+
+/* BUTTON */
+
+.button {
+  background-color: #ffffff;
+  border: #5e8c70 1px solid;
+  border-radius: 26px;
+  color: #5e8c70;
+  font-family: 'Hind', sans-serif;
+  font-size: 1em;
+  line-height: 25px;
+  margin: auto;
+  margin-top: 10%;
+  padding: 7px;   
+  width: 25%;
+  text-align: center;
+  text-decoration: none;
+  transition-duration: 0;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.button1 {
+  background-color: #ffffff; 
+  color: #5e8c70; 
+}
+
+.button1:hover {
+  background-color: #5e8c70;
+  color: #ffffff;
+}
+
+/* BASICS */
+
+body {
+    height: 100%;
+    background: #f6f7fd;
+    font-size: 16px;
+    overflow: auto;
+  }
+
+  .stage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 5rem 0;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  /* DOT-FLASHING */
+
+  .dot-flashing {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #9880ff;
+    color: #9880ff;
+    animation: dotFlashing 1s infinite linear alternate;
+    animation-delay: .5s;
+  }
+  
+  .dot-flashing::before, .dot-flashing::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+  }
+  
+  .dot-flashing::before {
+    left: -15px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #9880ff;
+    color: #9880ff;
+    animation: dotFlashing 1s infinite alternate;
+    animation-delay: 0s;
+  }
+  
+  .dot-flashing::after {
+    left: 15px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #9880ff;
+    color: #9880ff;
+    animation: dotFlashing 1s infinite alternate;
+    animation-delay: 1s;
+  }
+  
+  @keyframes dotFlashing {
+    0% {
+      background-color: #9880ff;
+    }
+    50%,
+    100% {
+      background-color: #ebe6ff;
+    }
+  }
